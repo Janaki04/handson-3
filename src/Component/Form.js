@@ -29,15 +29,15 @@ return (
     <form onSubmit={handleSubmit}>
     <h1 className='heading'>EMPLOYEE FEEDBACK FORM</h1>
       <label className='text1'>Name:
-      <input className='box1' type="text" name="name" 
+      <input required className='box1' type="text" name="name" 
       value={inputs.name} onChange={handleChange}/>
       </label>
       <label className='text2'> Department:
-        <input className='box1' type="text" name="department"
+        <input required className='box1' type="text" name="department"
          value={inputs.department} onChange={handleChange}/>
         </label>
         <label className='text3'>Rating:
-      <input className='box1' type="number" name="rating" 
+      <input required className='box1' type="number" name="rating" 
       value={inputs.rating} onChange={handleChange}/>
       </label>
         <input  className='box2' type="submit" />
@@ -45,6 +45,7 @@ return (
     </div>
     <div>{Submit?
     <div className='box4'>
+      <h1 className='heading1'>EMPLOYEE FEEDBACK DATA</h1>
     { output.map( item =>(
     <h5 className='text4' key={item.id}> Name : {item.name} ; Department : {item.department} ; Rating : {item.rating} </h5>
     ))}
